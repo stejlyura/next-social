@@ -1,7 +1,13 @@
+'use client'
 import type { Post } from '@/interfaces/postInterface'
 import { memo } from 'react'
+import { useEffect } from 'react'
+import { useUsers } from '@/stores/useUsers'
 
 const PostElement: React.FC<Post> = ({ userId, id, title, body }) => {
+
+    const users = useUsers((s) => s.users)
+  const user = users.find((u) => u.id === userId)
   return (
     <li
       className="
@@ -23,7 +29,7 @@ const PostElement: React.FC<Post> = ({ userId, id, title, body }) => {
           <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
           ID {id}
         </span>
-        <span>User: {userId}</span>
+        <span>{user ? user.name : `ID ${userId}`}</span>
       </div>
 
       {/* заголовок */}

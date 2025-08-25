@@ -2,12 +2,17 @@
 import Nav from "../templates/Nav";
 import { useAxiosAPI } from "@/hooks/axiosAPI";
 import type { Post } from "@/interfaces/postInterface";
+import type { User } from "@/interfaces/userInterface";
 import PostsVirtual from "../templates/PostsVirtual";
+import { useUsers } from "@/stores/useUsers";
+import { useEffect } from "react";
 
 export default function Home() {
     const { data, loading, error } = useAxiosAPI<Post[]>('https://jsonplaceholder.typicode.com/posts')
-
-  return (
+    const { users, loading: userLoading, error: userError, fetchUsers, removeUser } = useUsers()
+    
+    useEffect(() => { fetchUsers() }, [fetchUsers])
+    return (
     <div className="flex h-screen">
       <div className="w-1/5 bg-gray-50 h-full">
         <Nav/>
