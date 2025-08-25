@@ -25,8 +25,8 @@ function Nav() {
         </ul>
         <ul className='w-full p-2'>
             <li><a href="/">Home</a></li>
-            <li><a href="/Friends">Friends</a></li>
-            <li><a href="/Discovering">Discovering</a></li>
+            <li><a href="/friends">Friends</a></li>
+            <li><a href="/discovering">Discovering</a></li>
         </ul>
     </nav>
   )
