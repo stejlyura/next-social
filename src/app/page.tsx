@@ -1,8 +1,8 @@
 "use client"
-import Nav from "./templates/Nav";
+import Nav from "../templates/Nav";
 import { useAxiosAPI } from "@/hooks/axiosAPI";
 import type { Post } from "@/interfaces/postInterface";
-import PostsVirtual from "./templates/PostsVirtual";
+import PostsVirtual from "../templates/PostsVirtual";
 
 export default function Home() {
     const { data, loading, error } = useAxiosAPI<Post[]>('https://jsonplaceholder.typicode.com/posts')
