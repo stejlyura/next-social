@@ -29,7 +29,7 @@ const PostElement: React.FC<Post> = ({ userId, id, title, body }) => {
           <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
           ID {id}
         </span>
-        <span>{user ? user.name : `ID ${userId}`}</span>
+        <span><a href={`/user-page/${userId}`}>{user ? user.name : `ID ${userId}`}</a></span>
       </div>
 
       {/* заголовок */}
