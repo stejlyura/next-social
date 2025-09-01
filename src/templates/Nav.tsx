@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import React from 'react'
 import { useAxiosAPI } from '@/hooks/axiosAPI'
 import type { User } from '@/interfaces/userInterface'
@@ -15,10 +16,10 @@ function Nav() {
           {loading ? "User name" : data?.name}
         </li>
       </ul>
-      <ul className="w-full p-4 space-y-2">
-        <li><a href="/" className="block">Home</a></li>
-        <li><a href="/friends" className="block">Friends</a></li>
-        <li><a href="/#" className="block">Discovering</a></li>
+      <ul className="w-full p-2 space-y-2">
+        <li><Link href="/" className="block">Home</Link></li>
+        <li><Link href="/friends" className="block">Friends</Link></li>
+        <li><Link href="/discovering" className="block">Discovering</Link></li>
       </ul>
     </nav>
   )

@@ -22,7 +22,7 @@ export const useUsers = create<UsersState>((set) => ({
     try {
       const res = await axios.get<User[]>('https://jsonplaceholder.typicode.com/users')
       set({ users: res.data, loading: false })
-    } catch (e) {
+    } catch (_e) {
       set({ error: 'Ошибка загрузки', loading: false })
     }
   },

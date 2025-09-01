@@ -1,13 +1,10 @@
-'use client'
+"use client"
 import DesktopSidebar from '@/elements/DesktopSidebar'
 import MobileSidebar from '@/elements/MobileSidebar'
 import Overlay from '@/elements/Overlay'
 import { useUsers } from '@/stores/useUsers'
 import Nav from '@/templates/Nav'
 import React, { useEffect, useRef, useState } from 'react'
-import { useAxiosAPI } from "@/hooks/axiosAPI"
-import type { Post } from "@/interfaces/postInterface"
-import { useLockBodyScroll } from "@/hooks/useLockBodyScroll"
 
 function page() {
     const { users, loading, error, fetchUsers } = useUsers()

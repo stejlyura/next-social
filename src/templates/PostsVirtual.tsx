@@ -1,17 +1,15 @@
 "use client"
 import AutoSizer from "react-virtualized-auto-sizer"
 import { VariableSizeList as List, ListChildComponentProps } from "react-window"
-import { forwardRef, memo, useEffect, useLayoutEffect, useRef, useState } from "react"
+import { forwardRef, memo, useLayoutEffect, useRef } from "react"
 import PostElement from "./PostElement"
 import type { Post } from "@/interfaces/postInterface"
 
 const GAP_Y = 16
 
-const Outer = forwardRef<HTMLDivElement, React.HTMLProps<HTMLDivElement>>(
-  (props, ref) => (
-    <div {...props} ref={ref} className={`no-scrollbar ${props.className ?? ""}`} />
-  )
-)
+const Outer = forwardRef<HTMLDivElement, React.HTMLProps<HTMLDivElement>>(function Outer(props, ref) {
+  return <div {...props} ref={ref} className={`no-scrollbar ${props.className ?? ""}`} />;
+})
 
 type Props = { data: Post[] }
 

@@ -1,7 +1,8 @@
+"use client"
 import { useEffect, useState } from "react"
 import axios from "axios"
 
-export function useAxiosAPI<T = any>(url: string) {
+export function useAxiosAPI<T = unknown>(url: string) {
   const [data, setData] = useState<T | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<unknown>(null)

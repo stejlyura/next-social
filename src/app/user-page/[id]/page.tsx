@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { useAxiosAPI } from '@/hooks/axiosAPI'
 import { User } from '@/interfaces/userInterface'
