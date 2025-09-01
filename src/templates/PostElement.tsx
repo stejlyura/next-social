@@ -12,11 +12,9 @@ const PostElement: React.FC<Post> = ({ userId, id, title, body }) => {
     <li
       className="
         relative overflow-hidden
-        rounded-2xl border border-white/10
-        bg-[var(--panel)]/80 backdrop-blur-sm
-        shadow-[0_8px_24px_rgba(0,0,0,0.35)]
-        hover:shadow-[0_14px_40px_rgba(0,0,0,0.5)]
-        transition-shadow
+        rounded-xl border border-white/5
+        bg-[var(--panel)]/90 backdrop-blur
+        shadow-md
         p-4 md:p-6 list-none
       "
     >
