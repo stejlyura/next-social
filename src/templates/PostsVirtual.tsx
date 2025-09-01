@@ -54,23 +54,23 @@ export default function PostsVirtual({ data }: Props) {
   })
 
   return (
-    <div className="h-full">
-      <AutoSizer>
-        {({ height, width }) => (
-          <List
-            ref={listRef}
-            height={height}
-            width={width}
-            itemCount={data.length}
-            itemSize={getItemSize}
-            itemData={data}
-            itemKey={(i, d) => d[i].id}
-            outerElementType={Outer}
-          >
-            {Row}
-          </List>
-        )}
-      </AutoSizer>
-    </div>
-  )
+  <div className="h-full w-full">
+    <AutoSizer>
+      {({ height, width }) => (
+        <List
+          ref={listRef}
+          height={height}
+          width={width}
+          itemCount={data.length}
+          itemSize={getItemSize}
+          itemData={data}
+          itemKey={(i, d) => d[i].id}
+          outerElementType={Outer}
+        >
+          {Row}
+        </List>
+      )}
+    </AutoSizer>
+  </div>
+)
 }
