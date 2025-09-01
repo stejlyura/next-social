@@ -18,7 +18,7 @@ function Nav() {
       <ul className="w-full p-4 space-y-2">
         <li><a href="/" className="block">Home</a></li>
         <li><a href="/friends" className="block">Friends</a></li>
-        <li><a href="/discovering" className="block">Discovering</a></li>
+        <li><a href="/#" className="block">Discovering</a></li>
       </ul>
     </nav>
   )
