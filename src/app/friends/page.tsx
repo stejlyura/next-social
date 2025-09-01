@@ -6,7 +6,7 @@ import { useUsers } from '@/stores/useUsers'
 import Nav from '@/templates/Nav'
 import React, { useEffect, useRef, useState } from 'react'
 
-function page() {
+function Friendspage() {
     const { users, loading, error, fetchUsers } = useUsers()
     const burgerBtnRef = useRef<HTMLButtonElement | null>(null)
     const [open, setOpen] = useState(false)
@@ -78,4 +78,4 @@ function page() {
        )
 }
 
-export default page
+export default Friendspage

@@ -7,7 +7,7 @@ import Nav from '@/templates/Nav'
 import { useParams } from 'next/navigation'
 import React from 'react'
 
-function page() {
+function Userpage() {
   const { id } = useParams<{ id: string }>();
   const userId = Number(id)
   const users = useUsers(s => s.users);
@@ -36,4 +36,4 @@ function page() {
   )
 }
 
-export default page
+export default Userpage
