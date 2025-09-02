@@ -5,6 +5,8 @@ import Overlay from '@/elements/Overlay'
 import { useUsers } from '@/stores/useUsers'
 import Nav from '@/templates/Nav'
 import React, { useEffect, useRef, useState } from 'react'
+import { FriendsCard } from '@/elements/FriendsCard'
+import type {FriendsCardProps} from '@/elements/FriendsCard'
 
 function Friendspage() {
     const { users, loading, error, fetchUsers } = useUsers()
@@ -56,13 +58,15 @@ function Friendspage() {
   grid grid-cols-1 gap-4
   sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
             {users.map(u=>(
-                <div key={u.id}>
-                    <p>{u?.name}</p>
-                    <p>{u?.email}</p>
-                    <p>{u?.address.city}</p>
-                    <p>{u?.address.street}</p>
-                    <p>{u?.phone}</p>
-                </div>
+              <FriendsCard
+                key={u.id}
+                name={u.name}
+                email={u.email}
+                city={u.address.city}
+                street={u.address.street}
+                phone={u.phone}
+                userId={u.id}
+              />
             ))}
         </div>
       </div>
